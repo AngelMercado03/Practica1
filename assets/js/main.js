@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       new Swiper(swiper, config);
     });
   }
-  window.addEventListener('load', initSwiper);
+  document.addEventListener('DOMContentLoaded', initSwiper);
 
   /**
    * Animation on scroll function and init
@@ -210,4 +210,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('load', aosInit);
 
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var swiper = new Swiper('.swiper', {
+    loop: true,
+    speed: 600,
+    autoplay: {
+      delay: 5000
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
 });
